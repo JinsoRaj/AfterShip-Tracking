@@ -2,10 +2,8 @@ const cheerio = require('cheerio');
 const request = require('request');
 const express = require('express');
 const app = express();
-
-
 const list=[];
-
+app.use(express.json());
 
 async function getDetails(provider, id){
     const url = `https://m.aftership.com/${provider}/${id}`;
@@ -32,27 +30,29 @@ async function getDetails(provider, id){
     return list;
     });
 }
-module.exports = async(req, res) => {
 
-    app.get('/:provider/:id', async(req, res) => {
-        
-        try{
-            await getDetails(req.params.provider, req.params.id)
-            res.send(list);
-        }
-        catch(err){
-            console.log(err)
-            res.send(err)
-        }
-        
-    });
 
-    app.get('/', (req, res) => {
-        res.send({url:"INVALID", check_github:"https://github.com/JinsoRaj/AfterShip-Tracking"});
-    });
+app.get('/:provider/:id', async(req, res) => {
+    
+    try{
+        await getDetails(req.params.provider, req.params.id)
+        res.send(list);
+    }
+    catch(err){
+        console.log(err)
+        res.send(err)
+    }
+    
+});
 
-    app.use(express.json());
-        
-    // const port = process.env.PORT || 3000;
-    // app.listen(port, () => console.log(`Listening on port ${port}...`));
-}
+
+app.get('/', (req, res) => {
+    res.send({url:"INVALID", check_github:"https://github.com/JinsoRaj/AfterShip-Tracking"});
+});
+
+
+    
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+module.exports = app;

@@ -3,5 +3,10 @@
         "src": "/",
         "headers": { "Cache-Control": "no-cache, no-store, must-revalidate", "Access-Control-Allow-Origin": "*" },
         "dest": "/api"
+    },
+    {
+        "src": "/(.*)",
+        "headers": { "Cache-Control": "no-cache, no-store, must-revalidate", "Access-Control-Allow-Origin": "*" },
+        "dest": "/api"
     }]
 }
