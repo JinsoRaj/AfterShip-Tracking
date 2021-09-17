@@ -2,7 +2,7 @@
 Indian courier tracker api + telegram tracker bot
 
 ## Request
-```http
+```
 GET localhost:3000/{provider}/{trackingid}/
 ```
 #### Currently supported courier services
@@ -13,7 +13,7 @@ GET localhost:3000/{provider}/{trackingid}/
 | ```ekart```             |   ✅    |
 | ```dtdc```              |   ✅    |
 | ```india-post```        |   ✅    |
-| ```delhivery```         |   🤷‍♀️    |
+| ```delhivery```         |   ✅    |
 | ```bluedart```          |   🤷‍♀️    |
 | ```xpressbees```        |   🤷‍♀️    |
 | ```dhl```               |   🤷‍♀️    |
