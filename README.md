@@ -47,7 +47,7 @@ GET localhost:3000/{provider}/{trackingid}/
 ```
 ## Demo URL
 ```
-https://track.aftership.now.sh/{provider}/{trackingid}
+https://aftership.vercel.app/{provider}/{trackingid}
 ```
 ### TODO
 - Telegram bot with tracking notification
