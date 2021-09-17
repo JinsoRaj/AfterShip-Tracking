@@ -5,7 +5,7 @@ const app = express();
 const list=[];
 app.use(express.json());
 
-async function getDetails(provider, id){
+function getDetails(provider, id){
     const url = `https://m.aftership.com/${provider}/${id}`;
     request({
         method: 'GET',
@@ -17,7 +17,6 @@ async function getDetails(provider, id){
         }
 
         let $ = cheerio.load(body);
-        list.length =0;
 
         $('.sc-5t1owe-0').find('li').each(function() {
             var date = $(this).find('div > div > p:first-child').text();
@@ -27,16 +26,18 @@ async function getDetails(provider, id){
             var items = {time, date, status, place}
             list.push(items);
         });
-    return list;
+    //return list;
     });
 }
 
 
-app.get('/:provider/:id', async(req, res) => {
+app.get('/:provider/:id', (req, res) => {
     
     try{
-        await getDetails(req.params.provider, req.params.id)
+        
+        getDetails(req.params.provider, req.params.id)
         res.send(list);
+        list.length =0;
     }
     catch(err){
         console.log(err)

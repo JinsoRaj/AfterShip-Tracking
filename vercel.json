@@ -1,12 +1,12 @@
 {
     "routes": [{
         "src": "/",
-        "headers": { "Cache-Control": "no-cache, no-store, must-revalidate", "Access-Control-Allow-Origin": "*" },
+        "headers": { "Cache-Control": "no-cache, no-store, must-revalidate", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization" },
         "dest": "/api"
     },
     {
         "src": "/(.*)",
-        "headers": { "Cache-Control": "no-cache, no-store, must-revalidate", "Access-Control-Allow-Origin": "*" },
+        "headers": { "Cache-Control": "no-cache, no-store, must-revalidate", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization" },
         "dest": "/api"
     }]
 }
