@@ -1,0 +1,33 @@
+{
+  "name": "aftership-tracking",
+  "version": "1.0.0",
+  "description": "Track courier services",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "tgbot": "node tgbot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JinsoRaj/AfterShip-Tracking.git"
+  },
+  "keywords": [
+    "courier-tracking",
+    "indian-courier",
+    "aftership-api",
+    "ekart",
+    "dtdc",
+    "couriers"
+  ],
+  "author": "Jinso Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JinsoRaj/AfterShip-Tracking/issues"
+  },
+  "homepage": "https://github.com/JinsoRaj/AfterShip-Tracking#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
