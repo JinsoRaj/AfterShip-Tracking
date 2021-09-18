@@ -5,7 +5,7 @@
   "main": "api/index.js",
   "scripts": {
     "start": "node api/index.js",
-    "tgbot": "node tgbot.js"
+    "bot": "node bot.js"
   },
   "repository": {
     "type": "git",
