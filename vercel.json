@@ -10,6 +10,6 @@
         "dest": "/api"
     }],
     "github": {
-        "enabled": true
+        "enabled": false
       }
 }
