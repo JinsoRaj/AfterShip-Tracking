@@ -37,7 +37,7 @@ app.get('/:provider/:id', async(req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.send({url:"INVALID", check_github:"https://github.com/JinsoRaj/AfterShip-Tracking"});
+    res.send({url:"INVALID", check_github:"https://github.com/JinsoRaj/Courier-Tracking"});
 });
 
 

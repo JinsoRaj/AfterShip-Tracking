@@ -1,4 +1,4 @@
-# Aftership-Tracking
+# Courier-Tracking
 Indian courier tracker api + telegram tracker bot
 
 ## Request
@@ -47,7 +47,7 @@ GET localhost:3000/{provider}/{trackingid}/
 ```
 ## Demo URL
 ```
-https://aftership.vercel.app/{provider}/{trackingid}
+https://ctrack.vercel.app/{provider}/{trackingid}
 ```
 ### TODO
 - Telegram bot with tracking notification
